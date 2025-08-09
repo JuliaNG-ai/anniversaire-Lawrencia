@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Anniversaire anticipé — Lawrencia NGUEM 🎉</title>
+    <meta name="description" content="Journée sportive & surprise organisée par son duo & sa sistou. Rendez-vous Gare de Lyon 14h20." />
+    <style>
+        :root {
+            --bg: #fffafc;
+            --accent1: #7b2ff7;
+            --accent2: #f107a3;
+            --gold: #f5c26b;
+            --card: #ffffff;
+            --muted: #6b6b6b;
+            --radius: 14px;
+            --maxw: 1000px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, "Segoe UI", Roboto, system-ui, Arial;
+            background: linear-gradient(180deg, var(--bg), #fff);
+            color: #222;
+            -webkit-font-smoothing: antialiased;
+            background: linear-gradient(45deg, rgba(123, 47, 247, 0.8), rgba(241, 7, 163, 0.8)),
+                url('https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=1200&q=60');
+            background-size: cover;
+            animation: gradientAnimation 10s infinite alternate;
+        }
+
+        /* Glow effect on header and buttons */
+        header h1,
+        .btn {
+            text-shadow: 0 0 10px var(--accent1), 0 0 20px var(--accent2), 0 0 30px var(--accent2);
+            transition: text-shadow 0.3s ease;
+        }
+
+        header h1:hover,
+        .btn:hover {
+            text-shadow: 0 0 20px var(--accent1), 0 0 40px var(--accent2), 0 0 60px var(--accent2);
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, rgba(123, 47, 247, 0.8), rgba(241, 7, 163, 0.8));
+            }
+
+            100% {
+                background: linear-gradient(45deg, rgba(240, 105, 255, 0.8), rgba(255, 30, 170, 0.8));
+            }
+        }
+
+        header {
+            background: linear-gradient(rgba(123, 47, 247, 0.8), rgba(241, 7, 163, 0.8)),
+                url('https://images.unsplash.com/photo-1513267048338-3403d7ca705d?auto=format&fit=crop&w=1200&q=60') center/cover;
+            color: #fff;
+            padding: 48px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(1.6rem, 2.6vw, 2.6rem);
+        }
+
+        header p {
+            margin: 10px 0 0;
+            opacity: .95;
+        }
+
+        .container {
+            max-width: var(--maxw);
+            margin: 28px auto;
+            padding: 0 18px;
+        }
+
+        .section {
+            margin: 26px 0;
+        }
+
+        h2 {
+            color: var(--accent1);
+            margin: 0 0 12px;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: 0 8px 24px rgba(20, 20, 30, 0.06);
+            margin-bottom: 14px;
+            backdrop-filter: blur(4px);
+        }
+
+        .small {
+            font-size: .95rem;
+            color: var(--muted);
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        .grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .enigme {
+            background: #fff5fa;
+            padding: 14px;
+            border-left: 6px solid var(--accent2);
+            border-radius: 8px;
+            font-style: italic;
+        }
+
+        .countdown {
+            text-align: center;
+            padding: 16px;
+            font-weight: 600;
+            font-size: 1.6rem;
+            color: var(--accent2);
+            background: linear-gradient(90deg, rgba(123, 47, 247, 0.06), rgba(241, 7, 163, 0.04));
+            border-radius: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 10px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .ghost {
+            background: transparent;
+            border: 1px solid #eee;
+            color: var(--accent1);
+        }
+
+        .maplink {
+            color: var(--accent1);
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding: 18px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            margin-top: 32px;
+            padding: 18px;
+            text-align: center;
+            color: #fff;
+            background: linear-gradient(rgba(123, 47, 247, 0.85), rgba(241, 7, 163, 0.85)),
+                url('https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1200&q=60') center/cover;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        /* Modal */
+        .modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 10, 12, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 60;
+            display: none;
+        }
+
+        .modal {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 420px;
+            width: 92%;
+            box-shadow: 0 20px 50px rgba(10, 10, 20, 0.3);
+        }
+
+        .close {
+            background: #eee;
+            border-radius: 8px;
+            padding: 6px 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Glow effect on cards */
+        .card:hover {
+            border: 2px solid var(--accent1);
+            box-shadow: 0 0 10px
